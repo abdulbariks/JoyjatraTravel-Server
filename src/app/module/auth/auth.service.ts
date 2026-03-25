@@ -33,7 +33,7 @@ const registerTourist = async (payload: IRegisterPatientPayload) => {
 
     //TODO : Create Patient Profile In Transaction After Sign Up Of Patient In USer Model
     try {
-        const patient = await prisma.$transaction(async (tx) => {
+        const tourist = await prisma.$transaction(async (tx) => {
 
             const patientTx = await tx.tourist.create({
                 data: {
@@ -70,7 +70,7 @@ const registerTourist = async (payload: IRegisterPatientPayload) => {
             ...data,
             accessToken,
             refreshToken,
-            patient
+            tourist
         }
 
     } catch (error) {
