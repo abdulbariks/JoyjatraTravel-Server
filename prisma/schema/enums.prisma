@@ -1,7 +1,8 @@
 enum Role {
+  SUPER_ADMIN
   ADMIN
   MODERATOR
-  USER
+  TOURIST
 }
 
 enum UserStatus {
@@ -14,4 +15,16 @@ enum Gender {
   MALE
   FEMALE
   OTHER
+}
+
+// enum AppointmentStatus {
+//   SCHEDULED
+//   INPROGRESS
+//   COMPLETED
+//   CANCELED
+// }
+
+enum PaymentStatus {
+  PAID
+  UNPAID
 }
