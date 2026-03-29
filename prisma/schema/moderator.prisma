@@ -9,7 +9,7 @@ model Moderator {
   isDeleted           Boolean   @default(false)
   deletedAt           DateTime?
   experience          Int       @default(0)
-  gender              Gender
+  gender              Gender?   @default(MALE)
   qualification       String?
   currentWorkingPlace String?
   designation         String?
