@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { Role } from "../../../generated/prisma/enums";
 import { checkAuth } from "../../middleware/checkAuth";
-import { validateRequest } from "../../middleware/validateRequest";
+// import { validateRequest } from "../../middleware/validateRequest";
 import { UserController } from "./user.controller";
-import { createDoctorZodSchema } from "./user.validation";
+// import { createDoctorZodSchema } from "./user.validation";
 
 
 
@@ -11,26 +11,26 @@ import { createDoctorZodSchema } from "./user.validation";
 const router = Router();
 
 
-router.post("/create-doctor",
+// router.post("/create-doctor",
 
-    //     (req: Request, res: Response, next: NextFunction) => {
+//     //     (req: Request, res: Response, next: NextFunction) => {
 
-    //     const parsedResult = createDoctorZodSchema.safeParse(req.body);
+//     //     const parsedResult = createDoctorZodSchema.safeParse(req.body);
 
-    //     if (!parsedResult.success) {
-    //         next(parsedResult.error)
-    //     }
+//     //     if (!parsedResult.success) {
+//     //         next(parsedResult.error)
+//     //     }
 
-    //     //sanitizing the data
-    //     req.body = parsedResult.data;
+//     //     //sanitizing the data
+//     //     req.body = parsedResult.data;
 
-    //     next()
+//     //     next()
 
-    // }, 
+//     // }, 
 
-    validateRequest(createDoctorZodSchema),
+//     validateRequest(createDoctorZodSchema),
 
-    UserController.createDoctor);
+//     UserController.createDoctor);
 
 
 router.post("/create-admin",

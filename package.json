@@ -1,11 +1,11 @@
 {
-  "name": "Backend-Project-PH-Healthcare",
+  "name": "JoyjatraTravel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
-    "build": "tsc",
+    "build": "prisma generate && tsc",
     "dev": "tsx watch src/server.ts",
     "lint": "eslint ./src/**/*",
     "migrate": "prisma migrate dev",
